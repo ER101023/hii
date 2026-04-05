@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Kumutha ❤️</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffd6e0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #yesBtn {
+        background: #4CAF50;
+        color: white;
+    }
+
+    #noBtn {
+        background: #f44336;
+        color: white;
+        position: relative;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="mainBox">
+    <img src="https://i.imgur.com/yourphoto.jpg" alt="us">
+
+    <h1>Sorry Kumutha ❤️</h1>
+    <p>From Evan 💌<br>
+    I know I made a mistake... Will you forgive me?
+    I need you in my life and I’m very sorry about last night and today 🥺</p>
+
+    <button id="yesBtn" onclick="acceptLove()">Yes 💖</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<script>
+    function moveNo() {
+        const btn = document.getElementById("noBtn");
+        const x = Math.random() * 200 - 100;
+        const y = Math.random() * 200 - 100;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function acceptLove() {
+        document.getElementById("mainBox").innerHTML = `
+            <img src="evanjane.jpeg">
+            <h2>Thank you Kumutha ❤️</h2>
+            <p>I promise to never hurt you again. I love u sooo much bby💕<br>— Evan</p>
+        `;
+    }
+</script>
+
+</body>
+</html>
